@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScanEd</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#D4D4D4]">
+
+    <!-- Navigation Bar -->
+    <nav class="flex justify-between items-center p-6 bg-white shadow-md">
+        <h1 class="text-2xl font-bold">ScanEd.ai</h1>
+        <ul class="hidden md:flex space-x-6">
+            <li><button class="nav-button">📖 Lectures</button></li>
+            <li><button class="nav-button">📝 Notes</button></li>
+            <li><button class="nav-button">⚡ Quick Revision</button></li>
+        </ul>
+        <div>
+            <button class="mr-4 text-gray-700">Help</button>
+            <button onclick="openModal()" class="sign-in-button">Sign in</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Skills on your tips in Minutes</h2>
+        <p>One simple Search, Relevant and crisp courses.</p>
+        <button class="ai-search">AI search</button>
+    </section>
+
+    <!-- Scrolling Sections -->
+    <div class="relative w-full max-w-5xl mx-auto py-10">
+        <div class="scroll-container flex space-x-10">
+            <div class="scroll-card">
+                <h4>Learners and Students</h4>
+                <h2>You can learn anything.</h2>
+                <p>Build a deep, solid understanding in the most relevant courses for you.</p>
+                <button class="start-learning">Start Learning</button>
+            </div>
+            <div class="scroll-card">
+                <h4>Teachers</h4>
+                <h2>Differentiate your classroom and engage every student.</h2>
+                <button class="start-learning">Teachers, start here</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Upskill your Education</h2>
+            <p>Track prices, make exam planning easier and enjoy faster learning</p>
+            <button class="button email">Continue with email</button>
+            <button class="button facebook">
+                <img src="images/facebook.svg"> Continue with Facebook
+            </button>
+            <button class="button google">
+                <img src="images/google.png"> Continue with Google
+            </button>
+            <button class="button apple">
+                <img src="images/apple.png"> Continue with Apple
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
